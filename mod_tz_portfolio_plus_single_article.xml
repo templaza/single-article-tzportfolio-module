@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" client="site" method="upgrade">
+    <name>mod_tz_portfolio_plus_single_article</name>
+    <author>DuongTVTemplaza</author>
+    <creationDate>November 29 2019</creationDate>
+    <copyright>Copyright (C) 2011-2019 TZ Portfolio. All rights reserved.</copyright>
+    <license>GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html</license>
+    <authorEmail>support@templaza.com</authorEmail>
+    <authorUrl>www.tzportfolio.com/</authorUrl>
+    <version>1.0.1</version>
+    <description>MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_tz_portfolio_plus_single_article">mod_tz_portfolio_plus_single_article.php</filename>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_tz_portfolio_plus_single_article.xml</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_tz_portfolio_plus_single_article.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_tz_portfolio_plus_single_article.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="administrator/components/com_tz_portfolio_plus/models/fields">
+                <field name="article_id" type="modal_article"
+                       required="true"
+                       label="COM_TZ_PORTFOLIO_PLUS_FIELD_SELECT_ARTICLE_LABEL"
+                       description="COM_TZ_PORTFOLIO_PLUS_FIELD_SELECT_ARTICLE_DESC"/>
+
+                <field type="tztemplates" name="template_id"
+                       label="COM_TZ_PORTFOLIO_PLUS_TEMPLATE_LABEL">
+                    <option value="0">JOPTION_USE_DEFAULT</option>
+                </field>
+
+                <field name="show_title" type="radio"
+                       class="switcher btn-group" default="1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="JGLOBAL_SHOW_TITLE_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="show_introtext" type="radio"
+                       class="switcher btn-group" default="1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_INTROTEXT_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="introtext_limit" type="text"
+                       showon="show_introtext:1"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_INTROTEXT_LIMIT_LABEL"/>
+                <field type="radio" name="show_created_date"
+                       class="switcher btn-group" default="1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_CREATED_DATE_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_hit"
+                       class="switcher btn-group" default="1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_HIT_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_author"
+                       class="switcher btn-group" default="1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_AUTHOR_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+
+                <field type="radio" name="show_category_main"
+                       class="switcher btn-group" default="1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_CATEGORY_MAIN_LABEL"
+                       description="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_CATEGORY_MAIN_DESC">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_category_sec"
+                       class="switcher btn-group" default="1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_CATEGORY_SEC_LABEL"
+                       description="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_CATEGORY_SEC_DESC">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_tag"
+                       class="switcher btn-group" default="1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_TAG_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="radio" name="show_readmore"
+                        class="switcher btn-group" default="1"
+                       layout="joomla.form.field.radio.switcher"
+                        label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_READMORE_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="text" name="readmore_text"
+                       default="Read more"
+                       showon="show_readmore:1"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_READMORE_TEXT_LABEL"/>
+
+                <field name="usermenuitem" type="menuitem" default="auto"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SELECT_MENU_ITEMID_USER_LABEL">
+                    <option value="auto">JGLOBAL_AUTO</option>
+                </field>
+                <field name="tagmenuitem" type="menuitem" default="auto"
+                       label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SELECT_MENU_ITEMID_TAG_LABEL">
+                    <option value="auto">JGLOBAL_AUTO</option>
+                </field>
+
+                <!-- Start Related Options -->
+                <field type="spacer" name="spacer_global_related_hr" hr="true"/>
+                <field type="spacer" name="spacer_global_related"
+                       class="alert alert-warning btn-block"
+                       label="COM_TZ_PORTFOLIO_PLUS_RELATED_ARTICLE"/>
+                <field name="show_related_article" type="radio"
+                       class="switcher btn-group"
+                       default="1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="COM_TZ_PORTFOLIO_PLUS_SHOW_RELATED_ARTICLE">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field type="list" name="related_article_by"
+                       default="tag"
+                       showon="show_related_article:1"
+                       label="COM_TZ_PORTFOLIO_PLUS_RELATED_ARTICLE_BY"
+                       description="COM_TZ_PORTFOLIO_PLUS_RELATED_ARTICLE_BY_DESC">
+                    <option value="category">JCATEGORY</option>
+                    <option value="tag">COM_TZ_PORTFOLIO_PLUS_TAG</option>
+                </field>
+                <field name="related_limit" type="text" default="5"
+                       showon="show_related_article:1"
+                       label="COM_TZ_PORTFOLIO_PLUS_LIMIT_RELATED"/>
+                <field name="show_related_heading" type="radio"
+                       class="switcher btn-group"
+                       default="1"
+                       showon="show_related_article:1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="COM_TZ_PORTFOLIO_PLUS_SHOW_RELATED_HEADING">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="related_heading" type="text"
+                       showon="show_related_article:1"
+                       label="COM_TZ_PORTFOLIO_PLUS_RELATED_HEADING"/>
+                <field type="radio" name="show_related_title"
+                       class="switcher btn-group" default="1"
+                       showon="show_related_article:1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="COM_TZ_PORTFOLIO_PLUS_SHOW_RELATED_TITLE_LABEL">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="show_related_featured" type="list"
+                       default="1"
+                       showon="show_related_article:1"
+                       label="COM_TZ_PORTFOLIO_PLUS_SHOW_RELATED_FEATURED">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                    <option value="2">COM_TZ_PORTFOLIO_PLUS_RELATED_ONLY_SHOW_FEATURED</option>
+                </field>
+                <field name="related_orderby" type="list"
+                       default="rdate"
+                       showon="show_related_article:1"
+                       label="COM_TZ_PORTFOLIO_PLUS_RELATED_ORDERBY">
+                    <option value="o">COM_TZ_PORTFOLIO_PLUS_ORIGINAL</option>
+                    <option value="rdate">COM_TZ_PORTFOLIO_PLUS_MOST_RECENT</option>
+                    <option value="date">COM_TZ_PORTFOLIO_PLUS_MOST_OLDEST</option>
+                    <option value="hits">JGLOBAL_MOST_HITS</option>
+                    <option value="rhits">JGLOBAL_LEAST_HITS</option>
+                </field>
+                <!-- End Related Options -->
+                <!--<field type="radio" name="load_style"-->
+                       <!--class="switcher btn-group" default="0"-->
+                       <!--label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_LOAD_STYLE_LABEL">-->
+                    <!--<option value="0">JNO</option>-->
+                    <!--<option value="1">JYES</option>-->
+                <!--</field>-->
+            </fieldset>
+
+
+            <fieldset name="advanced">
+
+                <field type="modulelayout" name="layout"
+                       label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field type="text" name="moduleclass_sfx"
+                       label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+                <field type="list" name="cache"
+                       default="1"
+                       label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field type="text" name="cache_time"
+                       default="900"
+                       label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+                <field type="hidden" name="cachemode"
+                       default="static">
+                    <option value="static"></option>
+                </field>
+                <field type="radio" name="enable_bootstrap"
+                       default="0" class="switcher btn-group"
+                       layout="joomla.form.field.radio.switcher"
+                       label="COM_TZ_PORTFOLIO_PLUS_ENABLE_BOOTSTRAP_LIBRARY_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field type="list" name="bootstrapversion"
+                       default="3"
+                       showon="enable_bootstrap:1"
+                       label="COM_TZ_PORTFOLIO_PLUS_BOOTSTRAP_VERSION">
+                    <option value="3">JGLOBAL_SEF_ADVANCED_LEGACY</option>
+                    <option value="4">v4</option>
+                </field>
+                <field type="radio" name="enable_bootstrap_js"
+                       default="1" class="switcher btn-group"
+                       showon="enable_bootstrap:1"
+                       layout="joomla.form.field.radio.switcher"
+                       label="COM_TZ_PORTFOLIO_PLUS_ENABLE_BOOTSTRAP_JS_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" pirority="1" name="TZ Portfolio Plus - Single Article Module">
+            <![CDATA[https://www.tzportfolio.com/tzupdates/mod_tz_portfolio_plus_single_article.xml]]>
+        </server>
+    </updateservers>
+</extension>

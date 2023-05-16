@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="basic">
+            <field type="spacer" name="spacer_ct_colors_hr" hr="true"/>
+            <field type="spacer" name="spacer_ct_colors_name"
+                   class="alert alert-warning btn-block"
+                   label="PLG_CONTENT_COLORS_OPTIONS_LABEL"/>​
+            <field type="radio" name="show_colors"
+                   default="1" class="switcher btn-group"
+                   label="PLG_CONTENT_COLORS_SHOW_COLORS_LABEL"
+                   description="PLG_CONTENT_COLORS_SHOW_COLORS_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_aco" type="radio"
+                   default="1" class="switcher btn-group"
+                   label="PLG_CONTENT_COLORS_SHOW_ACO_LABEL"
+                   description="PLG_CONTENT_COLORS_SHOW_ACO_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        </fieldset>     ​
+    </fields>
+</form>

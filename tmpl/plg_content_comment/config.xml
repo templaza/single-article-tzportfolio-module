@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="basic">
+            <field type="spacer" name="spacer_comment_hr" hr="true"/>
+            <field type="spacer" name="spacer_comment_name"
+                   class="alert alert-warning btn-block"
+                   label="PLG_CONTENT_COMMENT_OPTIONS_LABEL"/>
+            <field type="list" name="comment_type"
+                   label="PLG_CONTENT_COMMENT_TYPE_LABEL">
+                <option value="facebook">PLG_CONTENT_COMMENT_FACEBOOK</option>
+                <option value="jcomment">PLG_CONTENT_COMMENT_JCOMMENT</option>
+                <option value="disqus">PLG_CONTENT_COMMENT_DISQUS</option>
+                <option value="komento">PLG_CONTENT_COMMENT_KOMENTO</option>
+            </field>
+            <field type="radio" name="show_comment"
+                   default="1"
+                   class="switcher btn-group"
+                   label="MOD_TZ_PORTFOLIO_PLUS_SINGLE_ARTICLE_SHOW_COMMENT_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field type="radio" name="show_comment_count"
+                   class="switcher btn-group"
+                   default="1"
+                   label="PLG_CONTENT_COMMENT_SHOW_COMMENT_COUNT_LABEL"
+                   description="PLG_CONTENT_COMMENT_SHOW_COMMENT_COUNT_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        </fieldset>        ​
+    </fields>
+</form>

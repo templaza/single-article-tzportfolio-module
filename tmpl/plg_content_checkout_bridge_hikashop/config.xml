@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="basic">
+            <field type="spacer" name="spacer_ct_chekout_bridge_hikashop_hr" hr="true"/>
+            <field type="spacer" name="spacer_ct_chekout_bridge_hikashop_name"
+                   class="alert alert-success btn-block"
+                   label="PLG_CONTENT_PURCHASE_OPTIONS_LABEL"/>
+            <field type="list" label="PLG_CONTENT_PURCHASE_SHOW_DISCOUNT_LABEL" name="show_discount" default="1">
+                <option value="0">JNO</option>
+                <option value="1">DISPLAY_DISCOUNT_AMOUNT</option>
+                <option value="2">DISPLAY_PRICE_BEFORE_DISCOUNT</option>
+            </field>
+            <field type="list" label="PLG_CONTENT_PURCHASE_SHOW_TAX_LABEL" name="price_with_tax" default="1">
+                <option value="0">NO_TAX</option>
+                <option value="1">WITH_TAX</option>
+                <option value="2">DISPLAY_BOTH</option>
+            </field>
+            <field type="radio" name="show_original_price"
+                   class="switcher btn-group" default="0"
+                   label="PLG_CONTENT_PURCHASE_SHOW_ORIGINAL_PRICE_LABEL">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field type="radio" name="show_dimension"
+                   class="switcher btn-group" default="0"
+                   label="PLG_CONTENT_PURCHASE_SHOW_DIMENSION_LABEL">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field type="radio" name="show_brand"
+                   class="switcher btn-group" default="0"
+                   label="PLG_CONTENT_PURCHASE_SHOW_BRAND_LABEL">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field type="list" name="show_stock"
+                   class="switcher btn-group" default="0"
+                   label="PLG_CONTENT_PURCHASE_SHOW_STOCK_LABEL">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+        </fieldset>     ​
+    </fields>
+</form>

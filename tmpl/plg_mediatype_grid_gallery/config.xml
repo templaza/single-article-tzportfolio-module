@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="mediatype_grid_gallery"
+                  label="PLG_MEDIATYPE_GRID_GALLERY_FIELDSET_LABEL">
+            <field name="grid_gallery_lightbox_option" type="List"
+                   label="PLG_MEDIATYPE_GRID_GALLERY_LIGHTBOX_LABEL"
+                   description="PLG_MEDIATYPE_GRID_GALLERY_LIGHTBOX_LABEL"
+                   multiple="true"
+                   default="[&quot;zoom&quot;, &quot;slideShow&quot;, &quot;fullScreen&quot;, &quot;thumbs&quot;, &quot;close&quot;]">
+                <option value="zoom">zoom</option>
+                <option value="share">share</option>
+                <option value="slideShow">slideShow</option>
+                <option value="fullScreen">fullScreen</option>
+                <option value="download">download</option>
+                <option value="thumbs">thumbs</option>
+                <option value="close">close</option>
+            </field>
+            <field type="radio" name="mt_grid_gallery_show"
+                   default="1" class="switcher btn-group"
+                   label="PLG_MEDIATYPE_GRID_GALLERY_SHOW_LABEL"
+                   description="PLG_MEDIATYPE_GRID_GALLERY_SHOW_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field type="tzimagesizelist" name="mt_grid_gallery_size"
+                   addon="grid_gallery"
+                   addon_group="mediatype"
+                   param_name="grid_gallery_size"
+                   param_text="title"
+                   param_value="image_name_prefix"
+                   label="PLG_MEDIATYPE_GRID_GALLERY_SIZE_LABEL">
+                <option value="o">PLG_MEDIATYPE_GRID_GALLERY_ORIGINAL</option>
+            </field>
+            <field type="list" name="mt_grid_gallery_type"
+                   default="masonry"
+                   label="PLG_MEDIATYPE_GRID_GALLERY_TYPE_LABEL">
+                <option value="grid">PLG_MEDIATYPE_GRID_GALLERY_GRID</option>
+                <option value="masonry">PLG_MEDIATYPE_GRID_GALLERY_MASONRY</option>
+                <option value="horizontal_masonry">PLG_MEDIATYPE_GRID_GALLERY_HORIZONTAL_MASONRY</option>
+            </field>
+            <field type="text" name="mt_grid_gallery_width"
+                   default="400"
+                   label="PLG_MEDIATYPE_GRID_GALLERY_GRID_WIDTH_LABEL"
+                   description="PLG_MEDIATYPE_GRID_GALLERY_GRID_WIDTH_DESC" />
+            <field type="text" name="mt_grid_gallery_height"
+                   default="250"
+                   label="PLG_MEDIATYPE_GRID_GALLERY_GRID_HEIGHT_LABEL"
+                   description="PLG_MEDIATYPE_GRID_GALLERY_GRID_HEIGHT_DESC" />
+
+            <!-- Start related options -->
+            <field type="radio" name="mt_grid_gallery_related_show_image"
+                   class="btn-group" default="1"
+                   label="PLG_MEDIATYPE_GRID_GALLERY_RELATED_SHOW_IMAGE_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field type="tzimagesizelist" name="mt_grid_gallery_related_size"
+                   addon="grid_gallery"
+                   addon_group="mediatype"
+                   param_name="grid_gallery_size"
+                   param_text="title"
+                   param_value="image_name_prefix"
+                   label="PLG_MEDIATYPE_GRID_GALLERY_RELATED_SIZE_LABEL"
+                   description="PLG_MEDIATYPE_GRID_GALLERY_RELATED_SIZE_DESC">
+                <option value="o">PLG_MEDIATYPE_GRID_GALLERY_ORIGINAL</option>
+            </field>
+            <!-- End related options -->
+        </fieldset>
+    </fields>
+</form>
